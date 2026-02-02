@@ -63,7 +63,7 @@ To do so follow the next steps:
             <p>It demonstrates basic web server configuration and hosting capabilities.</p>
         </section>
         <footer>
-            <p>&copy; 2024 My Web Server</p>
+            <p>&copy; 2025 My Web Server</p>
         </footer>
     </body>
     </html>

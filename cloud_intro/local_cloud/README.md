@@ -1,4 +1,4 @@
-# EDEM 2024-2025 Big Data and Cloud: Introduction
+# EDEM 2025-2026 Big Data and Cloud: Introduction
 
 For the first part of this module, we will simulate cloud computing concepts (IaaS, PaaS, SaaS) and security mechanisms entirely on local machines using **VirtualBox** and an **Ubuntu Server** virtual machine.
 

@@ -1,6 +1,6 @@
 # Cloud Introduction and Storage
 
-The following repo contains excercises related to the 2024-2025 Cloud introduction and storage modules of the Big Data & Cloud Master at EDEM
+The following repo contains excercises related to the 2025-2026 Cloud introduction and storage modules of the Big Data & Cloud Master at EDEM
 
 The folders are structured as follows:
 
