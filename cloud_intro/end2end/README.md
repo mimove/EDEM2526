@@ -58,7 +58,7 @@ make launch-events-brokers-manual-ip
 Once the kafka brokers are ready (wait 3-5 minutes). You can login in your browser in the following url
 
 ```sh
-http://<your-machine-ip>:8090
+http://<your-machine-ip>:8080
 ```
 
 And you should see the Kafka-UI.
