@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
   analytical_db:
-    image: clickhouse/clickhouse-server:latest
-    container_name: olap_db
+    image: clickhouse/clickhouse-server:23.8
+    container_name: analytical_db 
     ports:
       - "8124:8123"  # HTTP interface
       - "9001:9000"  # REST Interface
@@ -15,6 +15,8 @@ services:
       - clickhouse_data:/var/lib/clickhouse
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     restart: always
+    networks:
+      - analytical_network
 
   metabase:
     image: metabase/metabase:v0.44.6
@@ -31,7 +33,13 @@ services:
       - metabase_data:/metabase-data
       - ./plugins:/plugins
     restart: always
+    networks:
+      - analytical_network
 
 volumes:
   clickhouse_data:
   metabase_data:
+
+networks:
+  analytical_network:
+    driver: bridge
