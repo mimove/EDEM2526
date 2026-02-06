@@ -52,10 +52,12 @@
 7. Make sure you select `Instalar servidor OpenSSH`
 ![alt text](.images/ubuntu-8.png)
 
+
 8. In the feature server snaps, select `docker` and the `stable` version
 ![alt text](.images/ubuntu-9.png)
 ![alt text](.images/ubuntu-10.png)
-
+* On newer versions of the installer, there might not be a docker snap available. If that's the case, just skip this step and we will install docker later on
+  
 9. When everything is finished, click on `Reiniciar ahora`
 
 10. If you seee a `[FAILED]` message, just press `ENTER`
@@ -91,3 +93,44 @@ sudo chmod 777 /var/run/docker.sock
 
 17. Now if you run `docker run hello-world` you should see the hello-world image being dowloaded and run in your vm
 
+
+If you haven't been able to install docker during the installation of the ubuntu server, you can do it now by running the following commands in your vm terminal
+
+### Update and Prepare your system
+```sh
+sudo apt update && sudo apt upgrade -y
+sudo apt install ca-certificates curl gnupg lsb-release -y
+```
+
+### Add Docker's official GPG key
+```sh
+sudo install -m 0755 -d /etc/apt/keyrings
+curl `fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+
+### Set Up the Repository
+```sh
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+### Install Docker Engine
+```sh
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+```
+
+### Verify the installation
+```sh
+sudo docker run hello-world
+```
+
+### Run Docker without sudo (optional)
+```sh
+sudo usermod -aG docker $USER
+newgrp docker
+```
