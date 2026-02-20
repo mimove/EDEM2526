@@ -15,7 +15,7 @@ logging.basicConfig(
 )
 
 # Connection parameters
-DB_HOST = "34.175.209.131"
+DB_HOST = "<your-alloy-db-ip>"
 DB_PORT = "5432"
 DB_NAME = "postgres"
 DB_USER = "postgres"
