@@ -189,7 +189,7 @@ Once both the orders-app and the delivery-app VMs are running, you can log in in
 
 1. Move into the `orders-app` directory:
    ```sh
-   cd orders-app
+   cd orders_app
    ```
 
 2. Run the docker-compose to start the postgres data base and the admin:
