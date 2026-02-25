@@ -94,7 +94,7 @@ resource "google_sql_database_instance" "postgres_instance" {
 resource "google_sql_user" "postgres_user" {
   name     = "postgres"
   instance = google_sql_database_instance.postgres_instance.name
-  password = "EDEM2425"
+  password = "EDEM2526"
 }
 
 resource "google_sql_database" "ecommerce" {

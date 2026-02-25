@@ -51,14 +51,15 @@ Run the following command to create the instance:
 
 ```sh
 gcloud sql instances create edem-postgres \
-  --database-version=POSTGRES_15 \
+  --database-version=POSTGRES_16 \
   --tier=db-f1-micro \
+  --edition=ENTERPRISE \
   --region=europe-west1 \
   --availability-type=zonal \
-  --storage-size=100 \
+  --storage-size=10 \
   --no-deletion-protection \
   --authorized-networks=0.0.0.0/0 \
-  --root-password=EDEM2425
+  --root-password=EDEM2526
 ```
 
 Run the following command to create a user for the database:
@@ -66,7 +67,7 @@ Run the following command to create a user for the database:
 ```sh
 gcloud sql users create postgres \
   --instance=edem-postgres \
-  --password=EDEM2425
+  --password=EDEM2526
 ```
 
 Run the following command to create the ecommerce database:
@@ -88,7 +89,7 @@ gcloud sql databases create ecommerce \
 ## Move to the terraform directory
 
 ```sh
-cd EDEM2425/gcp_datawarehouse/excercise_end2end/terraform
+cd EDEM2526/gcp_datawarehouse/excercise_end2end/terraform
 ```
 
 ## Modify the variables for the SA in the variables.tf file
@@ -125,13 +126,13 @@ terraform destroy
 
 2. Run a git pull inside the repository:
    ```sh
-   cd EDEM2425
+   cd EDEM2526
    git pull
    ```
 
 3. Move to the correct directory:
    ```sh
-   cd EDEM2425/gcp_datawarehouse/excercise_end2end
+   cd EDEM2526/gcp_datawarehouse/excercise_end2end
    ```
 
 4. Create a virtual environment:
@@ -369,7 +370,7 @@ Let's now deploy Metabase to visualize the data from BigQuery.
 
 1. Go to the excercise directory in your local machine:
    ```sh
-   cd EDEM2425/gcp_datawarehouse/excercise_end2end
+   cd EDEM2526/gcp_datawarehouse/excercise_end2end
    ```
 
 2. Deploy the docker-compose of the analytical-layer:
