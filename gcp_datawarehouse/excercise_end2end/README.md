@@ -283,7 +283,7 @@ Now we can deploy the EL pipeline to syncronize the PostgresDB database with Big
 
 
 
-To do so, we need to run the following commands:
+To do so, we need to run the following commands (in your PC and inside the folder excercise_end2end):
 
 1. Create your application-default credentials. This will allow us to identify to the GCP services with our user account (in case you haven't done it yet):
    ```sh
