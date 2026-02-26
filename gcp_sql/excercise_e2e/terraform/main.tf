@@ -2,7 +2,7 @@ resource "google_compute_instance_from_machine_image" "delivery_app" {
   name           = "delivery-app"
   provider       = google-beta
   zone           = var.zone
-  source_machine_image  = "projects/edem-24-25-mimove/global/machineImages/image-template-edem"
+  source_machine_image  = "projects/edem-25-26-mimove/global/machineImages/image-template-edem"
   machine_type   = "e2-micro"
 
   network_interface {
@@ -27,7 +27,7 @@ resource "google_compute_instance_from_machine_image" "orders_app" {
   name           = "orders-app"
   provider       = google-beta
   zone           = var.zone
-  source_machine_image  = "projects/edem-24-25-mimove/global/machineImages/image-template-edem"
+  source_machine_image  = "projects/edem-25-26-mimove/global/machineImages/image-template-edem"
   machine_type   = "e2-micro"
 
   network_interface {

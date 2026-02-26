@@ -8,7 +8,7 @@ from google.cloud import pubsub_v1
 PROJECT_ID = "edem-25-26"
 TOPIC_ID = "edem-iot-pubsub"
 
-# Set credentials explicitly for Pub/Sub (Project edem-24-25-mimove)
+# Set credentials explicitly for Pub/Sub (Project edem-25-26-mimove)
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 # Initialize Pub/Sub Publisher
