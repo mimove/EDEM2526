@@ -25,3 +25,8 @@ The folders are structured as follows:
 **[gcp_datawarehouse](./gcp_datawarehouse/)**
 - [excercise_bigquery](./gcp_datawarehouse/excercise_bigquery/): Excercise to try the basic functionalities of BigQuery
 - [excercise_end2end](./gcp_datawarehouse/excercise_end2end/): Excercise to deploy an end2end architecture in GCP, using Cloud SQL, PubSub, Compute Engine instances and BigQuery
+
+
+**[gcp_nosql](./gcp_nosql/)**
+- [excercise_stocks](./gcp_nosql/excercise_stocks/): Excercise to use BigTable to store and query stock data
+- [excercise_iot](./gcp_nosql/excercise_iot/): Excercise to use an IoT application with Raspberry Pi and BigTable to query temperature data in real time.
