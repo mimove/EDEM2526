@@ -4,10 +4,10 @@ import os
 from google.cloud import pubsub_v1, bigtable
 
 # Google Cloud Configuration
-PUBSUB_PROJECT_ID = "edem-24-25-mimove"  # Project where the Pub/Sub topic is
-BIGTABLE_PROJECT_ID = "<your-project-id>"  # Project where Bigtable is
+PUBSUB_PROJECT_ID = "edem-25-26"  # Project where the Pub/Sub topic is
+BIGTABLE_PROJECT_ID = "edem-25-26"  # Project where Bigtable is
 TOPIC_ID = "edem-iot-pubsub"
-SUBSCRIPTION_ID = "<edem-user>-subscription"
+SUBSCRIPTION_ID = "mimove-subscription"
 BIGTABLE_INSTANCE_ID = "edem-bigtable-iot"
 BIGTABLE_TABLE_ID = "sensors_data"
 

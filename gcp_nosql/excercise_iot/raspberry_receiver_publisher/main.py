@@ -5,7 +5,7 @@ import datetime
 from google.cloud import pubsub_v1
 
 # Google Cloud Configuration
-PROJECT_ID = "edem-24-25-mimove"
+PROJECT_ID = "edem-25-26"
 TOPIC_ID = "edem-iot-pubsub"
 
 # Set credentials explicitly for Pub/Sub (Project edem-24-25-mimove)
