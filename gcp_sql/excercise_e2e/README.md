@@ -100,7 +100,7 @@ gcloud sql instances create edem-postgres \
   --storage-size=10 \
   --no-deletion-protection \
   --authorized-networks=0.0.0.0/0 \
-  --root-password=EDEM2526
+  --root-password=Edem2526#
 ```
 
 ## Create the required tables inside the PostgresDB instance
