@@ -86,6 +86,23 @@ terraform destroy
 -----------------------------
 
 
+### Steps to create a Cloud SQL instance with gcloud
+
+Run the following command to create a Cloud SQL Sandbox instance
+
+```sh
+gcloud sql instances create edem-postgres \
+  --database-version=POSTGRES_16 \
+  --tier=db-f1-micro \
+  --edition=ENTERPRISE \
+  --region=europe-west1 \
+  --availability-type=zonal \
+  --storage-size=10 \
+  --no-deletion-protection \
+  --authorized-networks=0.0.0.0/0 \
+  --root-password=EDEM2526
+```
+
 ## Create the required tables inside the PostgresDB instance
 
 First, create a new database in the UI of Cloud SQL. Go to database, click on `Create Database` and call it `ecommerce`.
