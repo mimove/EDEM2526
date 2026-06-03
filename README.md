@@ -43,3 +43,7 @@ The folders are structured as follows:
 
 **[aws_datalakehouse](./aws_datalakehouse/)**
 - [excercise](./aws_datalakehouse/excercise): Excercise to practice the use of Apache Iceberg with AWS Glue and Athena
+
+**[aws_nosql](./aws_nosql/)**
+- [excercise_1](./aws_nosql/excercise_1): Excercise to practice the use of DynamoDB with Python
+- [excercise_2](./aws_nosql/excercise_2): Excercise to practice the use of DynamoDB with Python with a more complex example
