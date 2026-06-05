@@ -16,6 +16,15 @@ In this module, we will learn how to configure RDS SQL Server on AWS. First, we 
 12. Leave the rest of the settings as default.
 13. Click on the "Create database" button.
 
+* If the public access option is not available, or it doesn't work as expected, run the following command in the AWS CommandShell
+  
+```bash
+aws rds modify-db-instance \
+    --db-instance-identifier database-1 \
+    --publicly-accessible \
+    --apply-immediately
+```
+
 After the database is created, you can connect to it using a tool like DBeaver. The port number is `5432` and the HOST is the endpoint of the RDS instance. You will have to allow inbound traffic to the port `5432` in the security group of the RDS instance.
 
 
